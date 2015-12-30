@@ -1,0 +1,17 @@
+/*
+ * Base Style
+*/
+html {
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: $baseBgColor;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: left;
+    font-family: $fontfamily;
+}
+section {
+    position: relative;
+}
