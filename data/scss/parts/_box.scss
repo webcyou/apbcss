@@ -50,6 +50,12 @@
     }
 }
 
+.picBox {
+    .label {
+        text-align: center;
+    }
+}
+
 .detailBox {
     .column {
         @include display-flex;
@@ -66,8 +72,13 @@
     }
     .partsBox {
         display:table-cell;
+        width: 200px;
         height: 180px;
         vertical-align: middle;
+        text-align: center;
+    }
+    .picBox {
+        padding-right: 40px;
     }
     &.profile {
         .detail {

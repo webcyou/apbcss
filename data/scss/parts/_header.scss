@@ -4,7 +4,7 @@
 header.header {
     height: 50px;
     background: #f8f8f8;
-    background: -webkit-gradient(linear, left top, right top, from(#fff), to(#f8f8f8));
+    @include background(linear-gradient(top, #fff, #f8f8f8));
     > .wrap {
         width: $baseWidth;
         margin: 0 auto;

@@ -45,3 +45,29 @@
     font-size: 18px;
     font-weight: bold;
 }
+
+
+.pic {
+    &.apbCSSType {
+        width: 104px;
+        height: 132px;
+        background: url(#{$imgPath}common/icon_apb_css_class_sp.png) no-repeat;
+        @include background-size(800px auto);
+        &.module {
+            background-position: -137px top;
+        }
+        &.skin {
+            background-position: -279px top;
+        }
+        &.number {
+            background-position: -409px top;
+        }
+        &.state {
+            width: 141px;
+            background-position: -530px top;
+        }
+        &.other {
+            background-position: -693px top;
+        }
+    }
+}
