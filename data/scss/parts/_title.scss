@@ -1,33 +1,47 @@
 /*
  * Title Style
 */
+
+/* Atomic */
 h1 {
     @include clearfix;
+
+    /* Atomic */
     a {
         color: #333;
         text-decoration: none;
         font-weight: bold;
         line-height: 38px;
     }
+
+    /* Atomic */
     .mainLogo {
         float: left;
     }
+
+    /* Atomic */
     .text {
         margin-left: 38px;
     }
 }
 
+/* Atomic */
 h2 {
     font-size: 74px;
     color: #333;
+
+    /* State */
     &.center {
         text-align: center;
     }
+
+    /* Skin */
     &.yellow {
         color: #F6D667;
     }
 }
 
+/* Atomic */
 h3 {
     padding-bottom: 6px;
     border-bottom: #E5A45B 2px solid;
@@ -35,6 +49,7 @@ h3 {
     color: #333;
 }
 
+/* Atomic */
 h4 {
     padding-left: 6px;
     border-left: #E5A45B 5px solid;

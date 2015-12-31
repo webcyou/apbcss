@@ -1,10 +1,16 @@
 /*
  * Paragraph Style
 */
+
+/* Atomic */
 .text {
+
+    /* Skin */
     &.orange {
         color: #E5A45B;
     }
+
+    /* State */
     &.center {
         text-align: center;
     }
@@ -15,39 +21,52 @@
         color: #6A9E00;
     }
 
+    /* Module */
     .icon.ban {
         margin: 0 4px -10px 0;
     }
 
+    /* Atomic */
     strong {
         color: #DC7F28;
     }
 }
+
+/* Atomic */
 .thumbnail {
+
+    /* State */
     &.center {
         text-align: center;
     }
 
+    /* Module */
     &.apbCSSType {
         margin: 40px 0;
     }
 }
 
+/* Atomic */
 .linkText {
     font-size: 18px;
+
+    /* State */
     &.right {
         text-align: right;
     }
 }
 
+/* Atomic */
 .label {
     padding: 6px 0;
     font-size: 18px;
     font-weight: bold;
 }
 
-
+/* Atomic */
 .pic {
+
+    /* Module */
     &.apbCSSType {
         width: 104px;
         height: 132px;

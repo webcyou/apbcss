@@ -1,13 +1,19 @@
 /*
  * Header Style
 */
+
+/* Module */
 header.header {
     height: 50px;
     background: #f8f8f8;
     @include background(linear-gradient(top, #fff, #f8f8f8));
+
+    /* Other */
     > .wrap {
         width: $baseWidth;
         margin: 0 auto;
+
+        /* Atomic */
         h1 {
             padding-top: 7px;
         }

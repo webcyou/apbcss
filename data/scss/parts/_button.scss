@@ -1,11 +1,15 @@
 /*
  * Button Style
 */
+
+/* Atomic */
 .btn {
     position: relative;
     width: 200px;
     height: 40px;
     border-radius: 6px;
+
+    /* Atomic */
     a {
         display: block;
         line-height: 40px;
@@ -15,6 +19,7 @@
         font-size: 18px;
     }
 
+    /* Module */
     &.primary {
         background: #404040;
         @include background(linear-gradient(top, #404040, #282828));
@@ -29,6 +34,7 @@
         &:hover { background: #EAEAEA; }
     }
 
+    /* Skin */
     &.green {
         background: #2A8000;
         @include background(linear-gradient(top, #2D8900, #246E00));
@@ -39,12 +45,15 @@
         @include background(linear-gradient(top, #FFC70A, #FA9600));
         &:hover { background: #FCAE05; }
     }
-
     &.l { width: 260px; }
+
+    /* State */
     &.center { margin: 0 auto; }
     &.disable { opacity: 0.4; }
 
+    /* Atomic */
     .icon {
+        /* Module */
         &.social {
             margin: 0px 6px -11px -34px;
         }

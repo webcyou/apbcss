@@ -1,9 +1,13 @@
 /*
  * Footer Style
 */
+
+/* Module */
 footer {
     background: #404040;
     color: #CCCCCC;
+
+    /* Other */
     .wrap {
         @include clearfix;
         position: relative;
@@ -14,18 +18,26 @@ footer {
         @include box-sizing(border-box);
         font-size: 13px;
         font-family: Arial, sans-serif;
+
+        /* Atomic */
         .copyright {
             clear: both;
             margin-top: 68px;
             padding-bottom: 20px;
             text-align: center;
         }
+
+        /* Module */
         .footerLogo {
             float: right;
             margin-top: 4px;
+
+            /* Module */
             .mainLogo {
                 float: right;
             }
+
+            /* Atomic */
             .text {
                 margin-right: 38px;
                 font-weight: bold;
