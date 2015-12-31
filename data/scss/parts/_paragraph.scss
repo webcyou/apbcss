@@ -1,0 +1,47 @@
+/*
+ * Paragraph Style
+*/
+.text {
+    &.orange {
+        color: #E5A45B;
+    }
+    &.center {
+        text-align: center;
+    }
+    &.note {
+        color: #BC0000;
+    }
+    &.success {
+        color: #6A9E00;
+    }
+
+    .icon.ban {
+        margin: 0 4px -10px 0;
+    }
+
+    strong {
+        color: #DC7F28;
+    }
+}
+.thumbnail {
+    &.center {
+        text-align: center;
+    }
+
+    &.apbCSSType {
+        margin: 40px 0;
+    }
+}
+
+.linkText {
+    font-size: 18px;
+    &.right {
+        text-align: right;
+    }
+}
+
+.label {
+    padding: 6px 0;
+    font-size: 18px;
+    font-weight: bold;
+}

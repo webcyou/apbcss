@@ -1,0 +1,36 @@
+/*
+ * Footer Style
+*/
+footer {
+    background: #404040;
+    color: #CCCCCC;
+    .wrap {
+        @include clearfix;
+        position: relative;
+        width: $baseWidth;
+        min-height: 100px;
+        margin: 0 auto;
+        padding-top: 14px;
+        @include box-sizing(border-box);
+        font-size: 13px;
+        font-family: Arial, sans-serif;
+        .copyright {
+            clear: both;
+            margin-top: 68px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        .footerLogo {
+            float: right;
+            margin-top: 4px;
+            .mainLogo {
+                float: right;
+            }
+            .text {
+                margin-right: 38px;
+                font-weight: bold;
+                line-height: 38px;
+            }
+        }
+    }
+}

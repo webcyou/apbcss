@@ -1,0 +1,100 @@
+/*
+ * Box Style
+*/
+.mainTop {
+    padding: 60px 0 30px;
+    background: #eee;
+    .mainLogo {
+        margin: 20px auto;
+    }
+}
+.contents {
+    @include box-sizing(border-box);
+    .text {
+        margin-top: 10px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    h3 {
+        margin: 30px 0 20px;
+    }
+    h4 {
+        margin: 30px 0 20px;
+    }
+    .textList {
+        margin-top: 20px;
+    }
+    &.agenda2 {
+        .thumbnail.atomicDesign {
+            margin: 20px 0 30px;
+        }
+    }
+    .detailBox {
+        margin-bottom: 40px;
+    }
+}
+
+.thumbBox {
+    &.agenda1 {
+        position: relative;
+        width: 900px;
+        margin: 10px auto 0;
+        .thumbnail {
+            margin-top: 20px;
+            &.smacss {
+                position: absolute;
+                top: 30px;
+                right: 50px;
+            }
+        }
+    }
+}
+
+.detailBox {
+    .column {
+        @include display-flex;
+    }
+    .thumbnail {
+        padding: 0 10px;
+    }
+    .detail {
+        min-width: 200px;
+        padding: 0 40px;
+    }
+    .codeBox {
+        width: 530px;
+    }
+    .partsBox {
+        display:table-cell;
+        height: 180px;
+        vertical-align: middle;
+    }
+    &.profile {
+        .detail {
+            .text {
+                margin-top: 0;
+                margin-bottom: 10px;
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+
+.codeBox {
+    width: 100%;
+    pre {
+        display: block;
+        padding: 10px;
+        margin: 0 0 10px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #333;
+        background: #f5f5f5;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+}

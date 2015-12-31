@@ -1,0 +1,43 @@
+/*
+ * Title Style
+*/
+h1 {
+    @include clearfix;
+    a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+        line-height: 38px;
+    }
+    .mainLogo {
+        float: left;
+    }
+    .text {
+        margin-left: 38px;
+    }
+}
+
+h2 {
+    font-size: 74px;
+    color: #333;
+    &.center {
+        text-align: center;
+    }
+    &.yellow {
+        color: #F6D667;
+    }
+}
+
+h3 {
+    padding-bottom: 6px;
+    border-bottom: #E5A45B 2px solid;
+    font-size: 40px;
+    color: #333;
+}
+
+h4 {
+    padding-left: 6px;
+    border-left: #E5A45B 5px solid;
+    font-size: 30px;
+    color: #333;
+}

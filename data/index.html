@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Atomic Design + OOCSS + SMACSS = Atomic Parts Base CSS（APB CSS）">
+    <meta name="keywords" content="CSS, APB CSS, Atomic Design, OOCSS, SMACSS, Atomic">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="APB CSS - Atomic Parts Base CSS -">
+    <meta property="og:description" content="Atomic Design + OOCSS + SMACSS = Atomic Parts Base CSS（APB CSS）">
+    <meta property="og:url" content="http://apbcss.com">
+    <meta property="og:image" content="http://apbcss.com/img/common/screen_shot_ogp.png">
+    <meta property="og:site_name" content="APB CSS - Atomic Parts Base CSS -">
+
+    <title>APB CSS - Atomic Parts Base CSS -</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="container">
+    <header class="header">
+        <div class="wrap">
+            <h1>
+                <a href="/">
+                    <p class="mainLogo s"></p>
+                    <p class="text">APB CSS - Atomic Parts Base CSS -</p>
+                </a>
+            </h1>
+        </div>
+    </header>
+    <section id="top" class="top">
+        <div class="mainTop">
+            <h2 class="center">APB CSS</h2>
+            <p class="mainLogo center"></p>
+            <h2 class="yellow center">ATOMIC PARTS BASE CSS</h2>
+        </div>
+
+        <div class="contents">
+            <h3>What is Atomic Parts Base CSS(APB CSS)</h3>
+            <p class="text">Atomic Design + OOCSS + SMACSS =</p>
+            <p class="text orange">Atomic Parts Base CSS (APB CSS)</p>
+            <div class="thumbBox agenda1">
+                <p class="thumbnail"><img src="/img/top/pic_atomic_design.png" width="560" alt="Atomic Design"></p>
+                <p class="thumbnail"><img src="/img/top/pic_oocss.png" alt="oocss"></p>
+                <p class="thumbnail smacss"><img src="/img/top/pic_smacss.png" alt="smacss"></p>
+            </div>
+            <h4>Point</h4>
+            <ul class="textList">
+                <li class="text">- <strong>Simple</strong></li>
+                <li class="text">- <strong>Predictable</strong></li>
+                <li class="text">- <strong>General versatility</strong></li>
+                <li class="text">- <strong>Reusable</strong></li>
+                <li class="text">- <strong>Maintainable</strong></li>
+                <li class="text">- <strong>Scalable</strong></li>
+                <li class="text">- <strong>Interactive</strong></li>
+            </ul>
+        </div><!-- /.contents -->
+
+        <div class="contents agenda2">
+            <h3>Atoms Style Sheet</h3>
+            <p class="text">Atomic Design</p>
+            <p class="thumbnail center atomicDesign"><img src="/img/top/pic_atomic_design.png" alt="Atomic Design"></p>
+            <p class="linkText right"><a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">http://bradfrost.com/blog/post/atomic-web-design/</a></p>
+
+            <h4>Atoms</h4>
+            <div class="detailBox">
+                <div class="column">
+                    <p class="thumbnail"><img src="/img/top/pic_atoms.png" alt="Atoms"></p>
+                    <div class="detail">
+                        <p class="text">Button</p>
+                        <div class="partsBox">
+                            <p class="btn primary"><a href="#">Button</a></p>
+                        </div>
+                    </div>
+                    <div class="codeBox">
+                        <p class="label">HTML</p>
+                        <pre>&lt;p class="btn primary"&gt;&lt;a href="#"&gt;Button&lt;/a&gt;&lt;/p&gt;</pre>
+                        <p class="label">CSS</p>
+<pre>.btn {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  border-radius: 6px;
+  a {
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+  &.primary {
+    background: #404040;
+    @include background(linear-gradient(top, #404040, #282828));
+    &:hover { background: #303030; }
+  }
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detailBox">
+                <div class="column">
+                    <p class="thumbnail"><img src="/img/top/pic_atoms.png" alt="Atoms"></p>
+                    <div class="detail">
+                        <p class="text">Icon</p>
+                        <div class="partsBox">
+                            <p class="icon social github"></p>
+                        </div>
+                    </div>
+                    <div class="codeBox">
+                        <p class="label">HTML</p>
+                        <pre>&lt;p class="icon social github"&gt;&lt;/p&gt;</pre>
+                        <p class="label">CSS</p>
+<pre>.icon {
+  display: inline-block;
+  &.social {
+    width: 34px;
+    height: 34px;
+    background: url(SpriteImagePath) no-repeat;
+    @include background-size(205px auto);
+    &.github { background-position: -171px top; }
+  }
+}</pre>
+                    </div>
+                </div>
+                <p class="text center note">Properties of the layout style is not included.</p>
+                <p class="text center"><span class="icon ban"></span>margin, float, position, etc..</p>
+            </div>
+
+        </div><!-- /.contents -->
+
+
+        <div class="contents">
+            <h3>Molecules Style Sheet</h3>
+
+            <h4>Molecules</h4>
+            <div class="detailBox">
+                <div class="column">
+                    <p class="thumbnail"><img src="/img/top/pic_molecules.png" alt="Molecules"></p>
+                    <div class="detail">
+                        <p class="text">Button + Icon</p>
+                        <div class="partsBox">
+                            <p class="btn primary"><a href="#"><span class="icon social github"></span>Button</a></p>
+                        </div>
+                    </div>
+                    <div class="codeBox">
+                        <p class="label">HTML</p>
+                        <pre>&lt;p class="btn primary"&gt;&lt;a href="#"&gt;&lt;span class="icon social github"&gt;&lt;/span&gt;Button&lt;/a&gt;&lt;/p&gt;</pre>
+                        <p class="label">CSS</p>
+                        <pre>.btn {
+    .icon {
+        &.social {
+            margin: 0px 6px -11px -34px;
+        }
+    }
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detailBox">
+                <div class="column">
+                    <p class="thumbnail"><img src="/img/top/pic_molecules.png" alt="Molecules"></p>
+                    <div class="detail">
+                        <p class="text">Text + Icon</p>
+                        <div class="partsBox">
+                            <p class="text"><span class="icon ban"></span>text</p>
+                        </div>
+                    </div>
+                    <div class="codeBox">
+                        <p class="label">HTML</p>
+                        <pre>&lt;p class="text"&gt;&lt;span class="icon ban"&gt;&lt;/span&gt;text&lt;/p&gt;</pre>
+                        <p class="label">CSS</p>
+<pre>
+.text {
+  .icon.ban {
+    margin: 0 4px -10px 0;
+  }
+}</pre>
+                    </div>
+                </div>
+                <p class="text center success">Layout property is generated when you became a molecule.</p>
+                <p class="text center success">margin, float, position, etc..</p>
+            </div>
+        </div><!-- /.contents -->
+
+        <div class="contents">
+            <h3>Multi Class <span class="sub">(object-oriented)</span></h3>
+            <h4>OOCSS + SMACSS</h4>
+            <div class="detailBox">
+                <div class="column">
+                    <p class="thumbnail"><img src="/img/top/pic_oocss.png" alt="OOCSS"></p>
+                    <p class="thumbnail"><img src="/img/top/pic_smacss.png" alt="smacss"></p>
+                </div>
+            </div>
+            <p class="text">Excerpts from the 「OOCSS」,「SMACSS 」</p>
+
+            <h4>CSS Class Type</h4>
+            <p class="thumbnail apbCSSType center"><img src="/img/top/pic_css_class_type.png" width="795" alt="CSS Class Type"></p>
+
+            <ul class="textList apbCSSType">
+                <li class="text">- <strong>Atomic</strong>：Class name of atom</li>
+                <li class="text">- <strong>Module</strong>：UI package name</li>
+                <li class="text">- <strong>Skin</strong>：Class name of decoration</li>
+                <li class="text">- <strong>Number</strong>：Numbering of the class name</li>
+                <li class="text">- <strong>State</strong>：Class name that represents the state</li>
+                <li class="text">- <strong>Other</strong>：Other class name</li>
+            </ul>
+            <p class="text center success">Based on the atom name or module name,<br> and grant the six types of class name.</p>
+
+            <h4>CSS Class Type ~ Atomic ~</h4>
+            <p class="label">example Class Name</p>
+            <ul class="textList">
+                <li class="text">- <strong>text</strong></li>
+                <li class="text">- <strong>icon</strong></li>
+                <li class="text">- <strong>btn</strong></li>
+                <li class="text">- <strong>thumbnail</strong></li>
+                <li class="text">- <strong>label</strong></li>
+                <li class="text">- <strong>input</strong></li>
+                <li class="text">- <strong>code</strong></li>
+                <li class="text">- <strong>separate</strong></li>
+            </ul>
+
+            <h4>CSS Class Type ~ Module ~</h4>
+            <p class="label">example Class Name</p>
+            <ul class="textList">
+                <li class="text">- <strong>header</strong></li>
+                <li class="text">- <strong>footer</strong></li>
+                <li class="text">- <strong>contents</strong></li>
+                <li class="text">- <strong>mainLogo</strong></li>
+                <li class="text">- <strong>title</strong></li>
+                <li class="text">- <strong>column</strong></li>
+                <li class="text">- <strong>thumbnailList</strong></li>
+                <li class="text">- <strong>textList</strong></li>
+                <li class="text">- <strong>detailBox</strong></li>
+                <li class="text">- <strong>modalWindow</strong></li>
+            </ul>
+
+            <h4>CSS Class Type ~ Skin ~</h4>
+            <p class="label">example Class Name</p>
+            <ul class="textList">
+                <li class="text">- <strong>red</strong></li>
+                <li class="text">- <strong>blue</strong></li>
+                <li class="text">- <strong>wide</strong></li>
+                <li class="text">- <strong>high</strong></li>
+                <li class="text">- <strong>low</strong></li>
+                <li class="text">- <strong>stripe</strong></li>
+                <li class="text">- <strong>subdued</strong></li>
+                <li class="text">- <strong>small</strong></li>
+                <li class="text">- <strong>middle</strong></li>
+            </ul>
+
+            <h4>CSS Class Type ~ Number ~</h4>
+            <p class="label">example Class Name</p>
+            <ul class="textList">
+                <li class="text">- <strong>one</strong></li>
+                <li class="text">- <strong>two</strong></li>
+                <li class="text">- <strong>no[nth]</strong></li>
+                <li class="text">- <strong>type[nth]</strong></li>
+                <li class="text">- <strong>first</strong></li>
+                <li class="text">- <strong>last</strong></li>
+                <li class="text">- <strong>odd</strong></li>
+                <li class="text">- <strong>even</strong></li>
+            </ul>
+
+            <h4>CSS Class Type ~ State ~</h4>
+            <p class="label">example Class Name</p>
+            <ul class="textList">
+                <li class="text">- <strong>active</strong></li>
+                <li class="text">- <strong>disable</strong></li>
+                <li class="text">- <strong>tapped</strong></li>
+                <li class="text">- <strong>success</strong></li>
+                <li class="text">- <strong>error</strong></li>
+                <li class="text">- <strong>highlight</strong></li>
+                <li class="text">- <strong>checked</strong></li>
+                <li class="text">- <strong>note</strong></li>
+                <li class="text">- <strong>center</strong></li>
+                <li class="text">- <strong>right</strong></li>
+            </ul>
+
+            <h4>CSS Class Type ~ Other ~</h4>
+            <p class="label">example Class Name</p>
+            <ul class="textList">
+                <li class="text">- <strong>wrap</strong></li>
+                <li class="text">- <strong>Service name</strong></li>
+                <li class="text">- <strong>Page name</strong></li>
+                <li class="text">- <strong>Controller name</strong></li>
+                <li class="text">- <strong>Namespace</strong></li>
+            </ul>
+
+        </div><!-- /.contents -->
+
+        <div class="contents">
+            <h3>Directory structure</h3>
+            <h4>SCSS Directory</h4>
+            <div class="codeBox">
+                <p class="label">SCSS</p>
+<pre>scss
+  |- base
+  |- pages
+  |- parts
+  _common_inc.scss
+  _parts.scss
+  style.scss
+</pre>
+            </div>
+
+            <ul class="textList">
+                <li class="text">- <strong>_common_inc.scss</strong>: import base and pages</li>
+                <li class="text">- <strong>_parts.scss</strong>: import parts files</li>
+            </ul>
+
+            <h4>base Directory</h4>
+            <div class="codeBox">
+                <p class="label">base</p>
+<pre>scss
+  |- base
+    |- _base.scss
+    |- _mixin.scss
+    |- _reset.scss
+    |- _setting.scss
+</pre>
+            </div>
+            <ul class="textList">
+                <li class="text">- <strong>_base.scss</strong>: Define -based style of application</li>
+                <li class="text">- <strong>_mixin.scss</strong>: Define mixin style</li>
+                <li class="text">- <strong>_reset.scss</strong>: Initialize the style</li>
+                <li class="text">- <strong>_setting.scss</strong>: Define such as variables and prefix</li>
+            </ul>
+
+            <h4>parts Directory</h4>
+            <div class="codeBox">
+                <p class="label">parts</p>
+<pre>scss
+  |- parts
+    |- _button.scss
+    |- _icon.scss
+    |- _list.scss
+    |- _paragraph.scss
+    ....
+</pre>
+            </div>
+            <p class="text success">File group that defines the atom and modules.</p>
+
+            <h4>pages Directory</h4>
+            <div class="codeBox">
+                <p class="label">pages</p>
+<pre>scss
+  |- pages
+    |- _top.scss
+    |- _info.scss
+    |- _profile.scss
+    |- _main_contents.scss
+    ....
+</pre>
+            </div>
+            <p class="text">Defines page-specific layout style.</p>
+
+            <h4>name space</h4>
+            <div class="codeBox">
+                <p class="label">HTML</p>
+                <pre>&lt;section id="top" class="top"&gt;</pre>
+            </div>
+            <p class="text success">ID is the controller name(pages Directory name)</p>
+            <p class="text success">The class name is the action name, provide a name space.</p>
+
+        </div><!-- /.contents -->
+
+        <div class="contents">
+            <h3>Sample</h3>
+            <p class="text">It is this page.</p>
+            <h4>github</h4>
+
+            <h4>Document</h4>
+
+            <h4>Blog</h4>
+
+        </div><!-- /.contents -->
+
+        <div class="contents">
+            <h3>Other</h3>
+            <h4>Author</h4>
+            <div class="detailBox profile">
+                <div class="column">
+                    <p class="thumbnail"><img src="/img/top/pic_profile.png" alt="DaisukeTakayama"></p>
+                    <div class="detail">
+                        <p class="label">Name</p>
+                        <p class="text">Daisuke Takayama</p>
+                        <p class="label">Country</p>
+                        <p class="text">Japan</p>
+                        <p class="label">Job</p>
+                        <p class="text">FrontEnd Engineer</p>
+                        <p class="label">Blog</p>
+                        <p class="linkText"><a href="http://www.webcyou.com" target="_blank">http://www.webcyou.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <ul class="profileSocialList">
+                <li class="github">
+                    <p class="icon social github"></p>
+                    <p class="linkText"><a href="https://github.com/webcyou" target="_blank">https://github.com/webcyou</a></p>
+                    <p class="linkText"><a href="https://github.com/panicdragon" target="_blank">https://github.com/panicdragon</a></p>
+                </li>
+                <li class="twitter">
+                    <p class="icon social twitter"></p>
+                    <p class="linkText"><a href="https://twitter.com/webcyou" target="_blank">@webcyou</a></p>
+                    <p class="linkText"><a href="https://twitter.com/panicdragon" target="_blank">@panicdragon</a></p>
+                </li>
+            </ul>
+        </div><!-- /.contents -->
+    </section>
+    <footer>
+        <div class="wrap">
+            <div class="footerLogo">
+                <p class="mainLogo s"></p>
+                <p class="text">APB CSS - Atomic Parts Base CSS -</p>
+            </div>
+            <p class="copyright">APB CSS - Atomic Parts Base CSS - All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+
+

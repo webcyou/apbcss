@@ -1,0 +1,72 @@
+/*
+ * Icon Style
+*/
+.icon {
+    display: inline-block;
+    &.social {
+        width: 34px;
+        height: 34px;
+        background: url(#{$imgPath}common/icon_social_circle_sp.png) no-repeat;
+        @include background-size(205px auto);
+        &.twitter { background-position: -42px top; }
+        &.hatena { background-position: -84px top; }
+        &.rss { background-position: -129px top; }
+        &.github { background-position: -171px top; }
+        .white {
+            background: url(#{$imgPath}common/icon_social_s_sp.png) no-repeat;
+            @include background-size(auto 15px);
+            &.facebook {
+                width: 8px;
+                height: 15px;
+                background-position: left top;
+            }
+            &.twitter {
+                width: 16px;
+                height: 13px;
+                background-position: -9px top;
+            }
+            &.google {
+                width: 16px;
+                height: 16px;
+                background-position: -26px top;
+            }
+            &.hatena {
+                width: 15px;
+                height: 13px;
+                background-position: -43px top;
+            }
+            &.feedly {
+                width: 17px;
+                height: 15px;
+                background-position: -59px top;
+            }
+            &.pocket {
+                width: 15px;
+                height: 13px;
+                background-position: -78px top;
+            }
+        }
+    }
+    &.ban {
+        width: 40px;
+        height: 40px;
+        background: url(#{$imgPath}common/icon_ban.png) no-repeat;
+        @include background-size(40px auto);
+    }
+}
+
+.mainLogo {
+    width: 188px;
+    height: 225px;
+    background: url(#{$imgPath}common/logo_main.png) no-repeat;
+    @include background-size(188px auto);
+    &.s {
+        width: 33px;
+        height: 38px;
+        @include background-size(33px auto);
+    }
+
+    &.center {
+        margin: 0 auto;
+    }
+}
