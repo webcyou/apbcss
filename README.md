@@ -34,12 +34,16 @@ Atomic Design + OOCSS + SMACSS =
 **Atomic Design**
 
 ![Atomic Design](http://apbcss.com/img/github/atomic-design.png)
+
 [AtomicDesign](http://bradfrost.com/blog/post/atomic-web-design/)
 
 ### Atoms
-|            |  Button     |
-|:----------:|:-----------:|
-| ![Atoms](http://apbcss.com/img/github/atomic-design_atom.png) |![button](http://apbcss.com/img/github/btn.png)|
+
+![Atoms](http://apbcss.com/img/github/atomic-design_atom.png)
+
+**Button**
+
+![button](http://apbcss.com/img/github/btn.png)
 
 HTML
 ````
@@ -69,10 +73,12 @@ CSS
   }
 }
 ````
+**Icon**
 
-|            |    Icon     |
-|:----------:|:-----------:|
-| ![Atoms](http://apbcss.com/img/github/atomic-design_atom.png) |![button](http://apbcss.com/img/github/github.png) |
+![Atoms](http://apbcss.com/img/github/atomic-design_atom.png) 
+
+![Icon](http://apbcss.com/img/github/github.png) 
+
 
 HTML
 ````
@@ -93,23 +99,27 @@ CSS
 }
 ````
 
-![Properties of the layout style is not included.](http://apbcss.com/img/github/no_layout.png) 
+->![Properties of the layout style is not included.](http://apbcss.com/img/github/no_layout.png) <-
 
 *****
 
 ## Molecules Style Sheet
 ### Molecules
 
-|            | Button + Icon |
-|:----------:|:-----------:|
-|![Molecules](http://apbcss.com/img/github/atomic-design_molecules.png)|![Button + Icon](http://apbcss.com/img/github/btn_icon.png)|
+![Molecules](http://apbcss.com/img/github/atomic-design_molecules.png)
+
+**Button + Icon**
+
+![Button + Icon](http://apbcss.com/img/github/btn_icon.png)
 
 HTML
+
 ````
 <p class="btn primary"><a href="#"><span class="icon social github"></span>Button</a></p>
 ````
 
 CSS
+
 ````
 .btn {
     .icon {
@@ -120,10 +130,11 @@ CSS
 }
 ````
 
+![Molecules](http://apbcss.com/img/github/atomic-design_molecules.png)
 
-|            | Text + Icon |
-|:----------:|:-----------:|
-|![Molecules](http://apbcss.com/img/github/atomic-design_molecules.png) | ![Text + Icon](http://apbcss.com/img/github/icon_text.png) |
+**Text + Icon**
+
+![Text + Icon](http://apbcss.com/img/github/icon_text.png)
 
 HTML
 ````
@@ -139,7 +150,7 @@ CSS
 }
 ````
 
-![Layout property is generated when you became a molecule.](http://apbcss.com/img/github/ok_layout.png) 
+->![Layout property is generated when you became a molecule.](http://apbcss.com/img/github/ok_layout.png) <-
 
 *****
 
