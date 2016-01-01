@@ -1,0 +1,20 @@
+/*
+ * Base Style
+*/
+html {
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: $baseBgColor;
+    font-size: 14px;
+    text-align: left;
+    font-family: $fontfamily;
+}
+section {
+    position: relative;
+}
+
+a {
+    color: #0060C1;
+}

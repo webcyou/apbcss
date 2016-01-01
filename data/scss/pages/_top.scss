@@ -1,0 +1,15 @@
+/*
+ * Top Page Style
+*/
+
+/* Module */
+section#top {
+    &.top {
+        padding-bottom: 60px;
+        .contents {
+            width: $baseWidth;
+            margin: 0 auto 40px;
+            padding: 30px 10px 0;
+        }
+    }
+}

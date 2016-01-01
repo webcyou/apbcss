@@ -1,0 +1,134 @@
+/*
+ * Box Style
+*/
+
+/* Module */
+.mainTop {
+    padding: 60px 0 30px;
+    background: #eee;
+
+    /* Module */
+    .mainLogo {
+        margin: 20px auto;
+    }
+}
+
+/* Module */
+.contents {
+    @include box-sizing(border-box);
+
+    /* Atomic */
+    .text {
+        margin-top: 10px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    h3 {
+        margin: 30px 0 20px;
+    }
+    h4 {
+        margin: 30px 0 20px;
+    }
+
+    /* Module */
+    .textList {
+        margin-top: 20px;
+    }
+    &.agenda2 {
+        .thumbnail.atomicDesign {
+            margin: 20px 0 30px;
+        }
+    }
+
+    /* Module */
+    .detailBox {
+        margin-bottom: 40px;
+    }
+}
+
+/* Module */
+.thumbBox {
+    &.agenda1 {
+        position: relative;
+        width: 900px;
+        margin: 10px auto 0;
+
+        /* Atomic */
+        .thumbnail {
+            margin-top: 20px;
+            /* Module */
+            &.smacss {
+                position: absolute;
+                top: 30px;
+                right: 50px;
+            }
+        }
+    }
+}
+
+/* Module */
+.picBox {
+    /* Atomic */
+    .label {
+        text-align: center;
+    }
+}
+
+/* Module */
+.detailBox {
+    /* Atomic */
+    .column {
+        @include display-flex;
+    }
+    .thumbnail {
+        padding: 0 10px;
+    }
+
+    /* Module */
+    .detail {
+        min-width: 200px;
+        padding: 0 40px;
+    }
+    .codeBox {
+        width: 530px;
+    }
+    .partsBox {
+        display:table-cell;
+        width: 200px;
+        height: 180px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .picBox {
+        padding-right: 40px;
+    }
+    &.profile {
+        .detail {
+            /* Atomic */
+            .text {
+                margin-top: 0;
+                margin-bottom: 10px;
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+/* Module */
+.codeBox {
+    width: 100%;
+    pre {
+        display: block;
+        padding: 10px;
+        margin: 0 0 10px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #333;
+        background: #f5f5f5;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+}

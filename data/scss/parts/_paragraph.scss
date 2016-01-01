@@ -1,0 +1,92 @@
+/*
+ * Paragraph Style
+*/
+
+/* Atomic */
+.text {
+
+    /* Skin */
+    &.orange {
+        color: #E5A45B;
+    }
+
+    /* State */
+    &.center {
+        text-align: center;
+    }
+    &.note {
+        color: #BC0000;
+    }
+    &.success {
+        color: #6A9E00;
+    }
+
+    /* Module */
+    .icon.ban {
+        margin: 0 4px -10px 0;
+    }
+
+    /* Atomic */
+    strong {
+        color: #DC7F28;
+    }
+}
+
+/* Atomic */
+.thumbnail {
+
+    /* State */
+    &.center {
+        text-align: center;
+    }
+
+    /* Module */
+    &.apbCSSType {
+        margin: 40px 0;
+    }
+}
+
+/* Atomic */
+.linkText {
+    font-size: 18px;
+
+    /* State */
+    &.right {
+        text-align: right;
+    }
+}
+
+/* Atomic */
+.label {
+    padding: 6px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Atomic */
+.pic {
+
+    /* Module */
+    &.apbCSSType {
+        width: 104px;
+        height: 132px;
+        background: url(#{$imgPath}common/icon_apb_css_class_sp.png) no-repeat;
+        @include background-size(800px auto);
+        &.module {
+            background-position: -137px top;
+        }
+        &.skin {
+            background-position: -279px top;
+        }
+        &.number {
+            background-position: -409px top;
+        }
+        &.state {
+            width: 141px;
+            background-position: -530px top;
+        }
+        &.other {
+            background-position: -693px top;
+        }
+    }
+}
