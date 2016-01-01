@@ -12,7 +12,7 @@ APB CSS - Atomic Parts Base CSS -
 
 Atomic Design + OOCSS + SMACSS =
 
-Atomic Parts Base CSS (APB CSS)
+**Atomic Parts Base CSS (APB CSS)**
 
 ![Atomic Parts Base CSS](http://apbcss.com/img/github/pic001.png)
 
@@ -31,7 +31,7 @@ Atomic Parts Base CSS (APB CSS)
 
 ## Atoms Style Sheet
 
-Atomic Design
+**Atomic Design**
 
 ![Atomic Design](http://apbcss.com/img/github/atomic-design.png)
 [AtomicDesign](http://bradfrost.com/blog/post/atomic-web-design/)
@@ -148,7 +148,7 @@ CSS
 
 ![OOCSS + SMACSS](http://apbcss.com/img/github/pic002.png)
 
-Excerpts from the 「OOCSS」,「SMACSS 」
+**Excerpts from the 「OOCSS」,「SMACSS 」**
 
 ### CSS Class Type
 
@@ -161,8 +161,8 @@ Excerpts from the 「OOCSS」,「SMACSS 」
 - State：Class name that represents the state
 - Other：Other class name
 
-Based on the atom name or module name,
-and grant the six types of class name.
+**Based on the atom name or module name,
+and grant the six types of class name.**
 
 
 ### CSS Class Type ~ Atomic ~
