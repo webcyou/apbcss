@@ -7,6 +7,9 @@
 Atomic Design + OOCSS + SMACSS =
 Atomic Parts Base CSS (APB CSS)
 
+![Atomic Parts Base CSS](http://apbcss.com/img/github/pic001.png)
+
+
 ### Point
 
 - Simple
@@ -18,14 +21,16 @@ Atomic Parts Base CSS (APB CSS)
 - Interactive
 
 ## Atoms Style Sheet
+
 Atomic Design
 
+![Atomic Design](http://apbcss.com/img/github/atomic-design.png)
 [AtomicDesign](http://bradfrost.com/blog/post/atomic-web-design/)
 
 ### Atoms
 |            |  Button     |
 |:----------:|:-----------:|
-|            |             |
+| ![Atoms](http://apbcss.com/img/github/atomic-design_atom.png) |![button](http://apbcss.com/img/github/btn.png)|
 
 HTML
 ````
@@ -58,7 +63,7 @@ CSS
 
 |            |    Icon     |
 |:----------:|:-----------:|
-|            |             |
+| ![Atoms](http://apbcss.com/img/github/atomic-design_atom.png) |![button](http://apbcss.com/img/github/github.png) |
 
 HTML
 ````
@@ -79,14 +84,14 @@ CSS
 }
 ````
 
-
+![Properties of the layout style is not included.](http://apbcss.com/img/github/no_layout.png) 
 
 ## Molecules Style Sheet
 ### Molecules
 
 |            | Button + Icon |
 |:----------:|:-----------:|
-|            |             |
+|![Molecules](http://apbcss.com/img/github/atomic-design_molecules.png)|![Button + Icon](http://apbcss.com/img/github/btn_icon.png)|
 
 HTML
 ````
@@ -107,7 +112,7 @@ CSS
 
 |            | Text + Icon |
 |:----------:|:-----------:|
-|            |             |
+|![Molecules](http://apbcss.com/img/github/atomic-design_molecules.png) | ![Text + Icon](http://apbcss.com/img/github/icon_text.png) |
 
 HTML
 ````
@@ -123,14 +128,18 @@ CSS
 }
 ````
 
+![Layout property is generated when you became a molecule.](http://apbcss.com/img/github/ok_layout.png) 
 
 ## Multi Class (object-oriented)
 ### OOCSS + SMACSS
 
+![OOCSS + SMACSS](http://apbcss.com/img/github/pic002.png)
 
 Excerpts from the 「OOCSS」,「SMACSS 」
 
 ### CSS Class Type
+
+![CSS Class Type](http://apbcss.com/img/github/css_class_type.png)
 
 - Atomic：Class name of atom
 - Module：UI package name
@@ -139,8 +148,13 @@ Excerpts from the 「OOCSS」,「SMACSS 」
 - State：Class name that represents the state
 - Other：Other class name
 
+Based on the atom name or module name,
+and grant the six types of class name.
+
 
 ### CSS Class Type ~ Atomic ~
+
+![Atomic](http://apbcss.com/img/github/css_class_type_001.png)
 example Class Name
 - text
 - icon
@@ -152,6 +166,8 @@ example Class Name
 - separate
 
 ### CSS Class Type ~ Module ~
+
+![Module](http://apbcss.com/img/github/css_class_type_002.png)
 example Class Name
 - header
 - footer
@@ -165,6 +181,8 @@ example Class Name
 - modalWindow
 
 ### CSS Class Type ~ Skin ~
+
+![Skin](http://apbcss.com/img/github/css_class_type_003.png)
 example Class Name
 Skin
 - red
@@ -178,6 +196,8 @@ Skin
 - middle
 - 
 ### CSS Class Type ~ Number ~
+
+![Number](http://apbcss.com/img/github/css_class_type_004.png)
 example Class Name
 Number
 - one
@@ -190,6 +210,8 @@ Number
 - even
 
 ### CSS Class Type ~ State ~
+
+![State](http://apbcss.com/img/github/css_class_type_005.png)
 example Class Name
 State
 - active
@@ -205,6 +227,8 @@ State
 
 
 ### CSS Class Type ~ Other ~
+
+![Other](http://apbcss.com/img/github/css_class_type_006.png)
 example Class Name
 Other
 - wrap
