@@ -39,9 +39,9 @@ Atomic Design + OOCSS + SMACSS =
 
 ### Atoms
 
-![Atoms](http://apbcss.com/img/github/atomic-design_atom.png)
-
 **Button**
+
+![Atoms](http://apbcss.com/img/github/atomic-design_atom.png)
 
 ![button](http://apbcss.com/img/github/btn.png)
 
