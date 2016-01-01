@@ -3,12 +3,15 @@
 ![screen_shot_ogp.png](http://apbcss.com/img/common/screen_shot_ogp.png)
 
 APB CSS - Atomic Parts Base CSS -
+
 [http://apbcss.com/](http://apbcss.com/)
 
+*****
 
 ## What is Atomic Parts Base CSS(APB CSS)
 
 Atomic Design + OOCSS + SMACSS =
+
 Atomic Parts Base CSS (APB CSS)
 
 ![Atomic Parts Base CSS](http://apbcss.com/img/github/pic001.png)
