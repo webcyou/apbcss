@@ -27,6 +27,8 @@ Atomic Parts Base CSS (APB CSS)
 - Scalable
 - Interactive
 
+*****
+
 ## Atoms Style Sheet
 
 Atomic Design
@@ -93,6 +95,8 @@ CSS
 
 ![Properties of the layout style is not included.](http://apbcss.com/img/github/no_layout.png) 
 
+*****
+
 ## Molecules Style Sheet
 ### Molecules
 
@@ -136,6 +140,8 @@ CSS
 ````
 
 ![Layout property is generated when you became a molecule.](http://apbcss.com/img/github/ok_layout.png) 
+
+*****
 
 ## Multi Class (object-oriented)
 ### OOCSS + SMACSS
@@ -244,6 +250,8 @@ Other
 - Controller name
 - Namespace
 
+*****
+
 ## Directory structure
 ### SCSS Directory
 
@@ -314,6 +322,8 @@ HTML
 ID is the controller name(pages Directory name)
 The class name is the action name, provide a name space.
 
+*****
+
 ## Sample
 It is this page.
 
@@ -326,7 +336,7 @@ It is this page.
 ### Blog
 [web帳](http://www.webcyou.com)
 
-
+*****
 
 ## Other
 ### Author
