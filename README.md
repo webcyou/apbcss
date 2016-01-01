@@ -99,7 +99,7 @@ CSS
 }
 ````
 
-->![Properties of the layout style is not included.](http://apbcss.com/img/github/no_layout.png) <-
+![Properties of the layout style is not included.](http://apbcss.com/img/github/no_layout.png)
 
 *****
 
@@ -150,7 +150,7 @@ CSS
 }
 ````
 
-->![Layout property is generated when you became a molecule.](http://apbcss.com/img/github/ok_layout.png) <-
+![Layout property is generated when you became a molecule.](http://apbcss.com/img/github/ok_layout.png)
 
 *****
 
@@ -352,13 +352,16 @@ It is this page.
 ## Other
 ### Author
 
-#### Name
+**Name** :
 Daisuke Takayama
-#### Country
+**Country** :
 Japan
-#### Job
+**Job** :
 FrontEnd Engineer
 
-#### twitter
+
+**twitter**
+
 [@webcyou](https://twitter.com/webcyou)
 [@panicdragon](https://twitter.com/panicdragon)
+
