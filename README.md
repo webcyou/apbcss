@@ -354,11 +354,12 @@ It is this page.
 
 **Name** :
 Daisuke Takayama
+
 **Country** :
 Japan
+
 **Job** :
 FrontEnd Engineer
-
 
 **twitter**
 
