@@ -10,13 +10,11 @@ APB CSS - Atomic Parts Base CSS -
 
 ## Atomic Parts Base CSS(APB CSS)って何？？
 
-Atomic Design + OOCSS + SMACSS =
+Atomic Design + OOCSS + SMACSS = **Atomic Parts Base CSS (APB CSS)**
 
-**Atomic Parts Base CSS (APB CSS)**
+**APBCSS** は **A**tomic **P**arts **B**ase **CSS**のそれぞれ頭文字を取っていて、「エーピービーシーエスエス」と呼びます。。
 
-APBCSS は Atomic Parts Base CSSのそれぞれ頭文字を取っていて、「エーピービーシーエスエス」と呼びます。。
-
-APBCSS は Atomic Designをベースに設計された「CSSアーキテクチャ」の一つとなります。
+**APBCSS** は Atomic Designをベースに設計された**「CSSアーキテクチャ」**の一つとなります。
 
 
 ![Atomic Parts Base CSS](http://apbcss.com/img/github/pic001.png)
@@ -34,11 +32,11 @@ APBCSS は Atomic Designをベースに設計された「CSSアーキテクチ�
 
 
 APBCSSの 特徴と致しまして、多くのCSSアーキテクチャでも用いられている、Layoutといった概念はなく、
-構成の考え方もその逆で、細部化出来ないUIパーツから、定義していくアーキテクチャとなっております。
+構成の考え方もその逆で、**細部化出来ないUIパーツから、定義していくアーキテクチャ**となっております。
 
-「細部化出来ないUIパーツ」をAtomic Partsとして振る舞い、Atomic PartsとAtomic Partsが組み合わさった際に、そのパーツは「Molecules」（分子）として（変化）振る舞われます。
+**「細部化出来ないUIパーツ」をAtomic Parts**として振る舞い、Atomic PartsとAtomic Partsが組み合わさった際に、そのパーツは**「Molecules」（分子）**として（変化）振る舞われます。
 
-また、それらの、Atomic Parts やMolecules Partsは、「Module」によって包括されます。
+また、それらの、Atomic Parts や、**Molecules Partsは、「Module」によって包括されます。**
 
 Atomic Parts やMolecules Partsが包括された「Module」 を更に「Module」 によって包括していきページは作成されると言った考えです。
 
@@ -477,7 +475,7 @@ The class name is the action name, provide a name space.
 *****
 
 ## Sample
-It is this page.
+近日公開
 
 ### OfficalPage
 [http://apbcss.com/](http://apbcss.com/)
