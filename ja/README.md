@@ -189,14 +189,13 @@ CSS
 }
 ````
 
+![Layout property is generated when you became a molecule.](http://apbcss.com/img/github/ok_layout.png)
+
 原子パーツ「アイコン」には、「State」typeの classが付与されています。
 
 原子パーツと原子パーツが合わさり、分子パーツとなった場合は
 
 「テキスト」にはLayoutを定義するStyleは発生致しないのですが、その子要素にはLayoutを定義するStyleが発生致します。
-
-
-![Layout property is generated when you became a molecule.](http://apbcss.com/img/github/ok_layout.png)
 
 *****
 
@@ -220,6 +219,9 @@ CSS
 - State：状態を表すクラス名
 - Other：その他のクラス名。パーツのセマンティックネームもここに含む。
 
+**Based on the atom name or module name,
+and grant the six types of class name.**
+
 主に、「Atomic」と「Module」のクラス名を基本とします。
 
 つまり、単独クラスで存在するのは基本「Atomic」と「Module」で、
@@ -227,10 +229,6 @@ CSS
 「Skin」「Number」「State」「Other」は、それらパーツの付与クラスとして扱われます。
 
 しかし、ul等をモジュールとして扱う場合の子要素に限っては例外とする。
-
-
-**Based on the atom name or module name,
-and grant the six types of class name.**
 
 
 ### CSS Class Type ~ Atomic ~
@@ -375,7 +373,7 @@ Other
 
 etc..
 
-APB CSSでは、クラス名はローワーキャメルケース、ハイフン繋ぎ等のクラス名のレギュレーションは定めておりません。
+APB CSSでは、クラス名がローワーキャメルケース、ハイフン繋ぎ等と言った、所謂クラス名のレギュレーションは定めておりません。
 
 大事なのは、「原子パーツ」であるか、「モジュール」であるかと
 
@@ -385,6 +383,9 @@ APB CSSでは、クラス名はローワーキャメルケース、ハイフン�
 *****
 
 ## Directory structure
+
+APBCSSでは以下のディレクトリ構造及びSCSSファイルの管理方法を推奨しております。
+
 ### SCSS Directory
 
 SCSS
@@ -400,6 +401,9 @@ scss
 
 - _common_inc.scss: import base and pages
 - _parts.scss: import parts files
+
+- _common_inc.scss:プロジェクト全体の共通style
+- _parts.scss:原子パーツのstyle
 
 ### base Directory
 
@@ -417,7 +421,14 @@ scss
 - _reset.scss: Initialize the style
 - _setting.scss: Define such as variables and prefix
 
+- _common_inc.scss:プロジェクト全体の共通のベースとなるstyle
+- _mixin.scss: mixin style
+- _reset.scss: 初期化 style
+- _setting.scss: 変数及びプリフィックスなどを定義したstyle
+
 ### parts Directory
+
+パーツディレクトリにパーツ単位でファイル分けを行います。
 
 parts
 ````
@@ -433,6 +444,8 @@ File group that defines the atom and modules.
 
 ### pages Directory
 
+ページ固有のstyleはこちらに格納致します。
+
 pages
 ````
 scss
@@ -444,9 +457,16 @@ scss
     ....
 ````
 
+主にmargin、position、floatなどのLayout Styleを定義する事になります。
+
+原子パーツにまでするほどでもないページ固有のパーツもこちらに定義すると良いでしょう。
+
 Defines page-specific layout style.
 
 ### name space
+
+ネームスペースを設けることによってページ固有のstyleを定義することができます。
+
 HTML
 ````
 <section id="top" class="top">
