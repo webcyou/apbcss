@@ -231,7 +231,7 @@ and grant the six types of class name.**
 
 ### CSS Class Type ~ Atomic ~
 
-原子パーツのクラス名となります。
+原子パーツのクラス名の例となります。
 
 ![Atomic](http://apbcss.com/img/github/css_class_type_001.png)
 example Class Name
@@ -246,6 +246,7 @@ example Class Name
 
 ...
 
+
 - テキストパーツの場合「text」「〇〇Text」「text〇〇」「〇〇-text」「text-〇〇」...
 - アイコンパーツの場合「icon」「〇〇Icon」「icon〇〇」「〇〇-icon」「icon-〇〇」...
 - ボタンパーツの場合「btn」「〇〇Btn」「btn〇〇」「〇〇-btn」「btn-〇〇」...
@@ -253,7 +254,7 @@ example Class Name
 
 ### CSS Class Type ~ Module ~
 
-モジュールのクラス名となります。
+モジュールのクラス名の例となります。
 
 ![Module](http://apbcss.com/img/github/css_class_type_002.png)
 example Class Name
@@ -281,6 +282,8 @@ example Class Name
 
 ここからのクラスは、原子パーツやモジュールの付与クラスとして扱います。
 
+スキンタイプのクラス名の例となります。
+
 ![Skin](http://apbcss.com/img/github/css_class_type_003.png)
 example Class Name
 Skin
@@ -306,7 +309,7 @@ Skin
 
 ### CSS Class Type ~ Number ~
 
-ナンバリングのクラス名となります。
+ナンバリングのクラス名の例となります。
 
 ![Number](http://apbcss.com/img/github/css_class_type_004.png)
 example Class Name
@@ -325,7 +328,7 @@ Number
 
 ### CSS Class Type ~ State ~
 
-状態を表すクラス名となります。
+状態を表すクラス名の例となります。
 
 ![State](http://apbcss.com/img/github/css_class_type_005.png)
 example Class Name
@@ -350,7 +353,7 @@ State
 
 ### CSS Class Type ~ Other ~
 
-その他のクラス名となります。
+その他のクラス名の例となります。
 
 ![Other](http://apbcss.com/img/github/css_class_type_006.png)
 example Class Name
@@ -371,11 +374,9 @@ Other
 
 etc..
 
-APB CSSでは、クラス名がローワーキャメルケース、ハイフン繋ぎ等と言った、所謂クラス名のレギュレーションは定めておりません。
+APB CSSでは、クラス名がローワーキャメルケース、ハイフン繋ぎ等と言った、所謂**クラス名のレギュレーションは定めておりません**。
 
-大事なのは、「原子パーツ」であるか、「モジュール」であるかと
-
-それら「原子パーツ」「モジュール」以外のその他のクラスは付与クラスとして扱うことに重点を置いております。
+大事なのは、**「原子パーツ」であるか、「モジュール」であるか**と、それら**「原子パーツ」「モジュール」以外のその他のクラスは付与クラスとして扱う**ことに重点を置いております
 
 
 *****
@@ -397,11 +398,9 @@ scss
   style.scss
 ````
 
-- _common_inc.scss: import base and pages
-- _parts.scss: import parts files
-
 - _common_inc.scss:プロジェクト全体の共通style
 - _parts.scss:原子パーツのstyle
+
 
 ### base Directory
 
@@ -414,10 +413,6 @@ scss
     |- _reset.scss
     |- _setting.scss
 ````
-- _base.scss: Define -based style of application
-- _mixin.scss: Define mixin style
-- _reset.scss: Initialize the style
-- _setting.scss: Define such as variables and prefix
 
 - _common_inc.scss:プロジェクト全体の共通のベースとなるstyle
 - _mixin.scss: mixin style
@@ -454,12 +449,12 @@ scss
     |- _main_contents.scss
     ....
 ````
+Defines page-specific layout style.
 
 主にmargin、position、floatなどのLayout Styleを定義する事になります。
 
 原子パーツにまでするほどでもないページ固有のパーツもこちらに定義すると良いでしょう。
 
-Defines page-specific layout style.
 
 ### name space
 
