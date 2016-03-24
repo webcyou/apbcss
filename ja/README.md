@@ -124,16 +124,19 @@ CSS
 }
 ````
 
+これら「原子パーツ」には、Layoutを定義するStyleは発生致しません。
+
 ![Properties of the layout style is not included.](http://apbcss.com/img/github/no_layout.png)
 
 *****
 
 ## Molecules Style Sheet
-### Molecules
 
 Atomic Parts とAtomic Partsが組み合わさった際に、そのパーツは「Molecules」分子として（変化）振る舞われます。
 
 また、これらの、Atomic Parts やMolecules Partsは、「Module」によって包括されます。
+
+### Molecules （分子）
 
 ![Molecules](http://apbcss.com/img/github/atomic-design_molecules.png)
 
@@ -160,6 +163,7 @@ CSS
 ````
 
 原子パーツとして振る舞っている「ボタン」には、Layoutを定義するStyleは発生致しません。
+
 その子要素である原子パーツ「アイコン」にStyleは発生致します。
 
 
@@ -186,7 +190,10 @@ CSS
 ````
 
 原子パーツ「アイコン」には、「State」typeの classが付与されています。
-この際も「テキスト」にはLayoutを定義するStyleは発生致しません。
+
+原子パーツと原子パーツが合わさり、分子パーツとなった場合は
+
+「テキスト」にはLayoutを定義するStyleは発生致しないのですが、その子要素にはLayoutを定義するStyleが発生致します。
 
 
 ![Layout property is generated when you became a molecule.](http://apbcss.com/img/github/ok_layout.png)
@@ -200,7 +207,7 @@ CSS
 
 **Excerpts from the 「OOCSS」,「SMACSS 」**
 
-付与されるClassはマルチクラスを採用しております。
+付与されるClassは OOCSS + SMACSS をベースとした、マルチクラスを採用しております。
 
 ### CSS Class Type
 
@@ -214,7 +221,13 @@ CSS
 - Other：その他のクラス名。パーツのセマンティックネームもここに含む。
 
 主に、「Atomic」と「Module」のクラス名を基本とします。
-つまり、単独クラスで存在するのは「Atomic」と「Module」で、「Skin」「Number」「State」「Other」は、それらパーツの付与クラスとして扱われます。
+
+つまり、単独クラスで存在するのは基本「Atomic」と「Module」で、
+
+「Skin」「Number」「State」「Other」は、それらパーツの付与クラスとして扱われます。
+
+しかし、ul等をモジュールとして扱う場合の子要素に限っては例外とする。
+
 
 **Based on the atom name or module name,
 and grant the six types of class name.**
@@ -222,7 +235,7 @@ and grant the six types of class name.**
 
 ### CSS Class Type ~ Atomic ~
 
-原子パーツ名となります。
+原子パーツのクラス名となります。
 
 ![Atomic](http://apbcss.com/img/github/css_class_type_001.png)
 example Class Name
@@ -237,20 +250,21 @@ example Class Name
 
 ...
 
-テキストパーツの場合「text」「〇〇Text」「text〇〇」「〇〇-text」「text-〇〇」...
-アイコンパーツの場合「icon」「〇〇Icon」「icon〇〇」「〇〇-icon」「icon-〇〇」...
-ボタンパーツの場合「btn」「〇〇Btn」「btn〇〇」「〇〇-btn」「btn-〇〇」...
+- テキストパーツの場合「text」「〇〇Text」「text〇〇」「〇〇-text」「text-〇〇」...
+- アイコンパーツの場合「icon」「〇〇Icon」「icon〇〇」「〇〇-icon」「icon-〇〇」...
+- ボタンパーツの場合「btn」「〇〇Btn」「btn〇〇」「〇〇-btn」「btn-〇〇」...
 等のクラス名を用いて原子パーツを作成します。
 
 ### CSS Class Type ~ Module ~
 
-モジュール名となります。
+モジュールのクラス名となります。
 
 ![Module](http://apbcss.com/img/github/css_class_type_002.png)
 example Class Name
 - header
 - footer
 - contents
+- ◯◯View
 - mainLogo
 - title
 - column
@@ -261,15 +275,15 @@ example Class Name
 
 ...
 
-ヘッダーモジュールの場合「header」「〇〇Header」「header〇〇」「〇〇-header」「header-〇〇」...
-タイトルモジュールの場合「title」「〇〇Title」「title〇〇」「〇〇-title」「title-〇〇」...
-リストモジュールの場合「list」「〇〇List」「list〇〇」「〇〇-list」「list-〇〇」...
+- ヘッダーモジュールの場合「header」「〇〇Header」「header〇〇」「〇〇-header」「header-〇〇」...
+- タイトルモジュールの場合「title」「〇〇Title」「title〇〇」「〇〇-title」「title-〇〇」...
+- リストモジュールの場合「list」「〇〇List」「list〇〇」「〇〇-list」「list-〇〇」...
 等のクラス名を用いてモジュールを作成します。
 
 
 ### CSS Class Type ~ Skin ~
 
-ここから、原子パーツやモジュールの付与クラスとして扱います。
+ここからのクラスは、原子パーツやモジュールの付与クラスとして扱います。
 
 ![Skin](http://apbcss.com/img/github/css_class_type_003.png)
 example Class Name
@@ -286,9 +300,17 @@ Skin
 
 ...
 
+- ボタンパーツを赤くしたい場合「btn red」「〇〇Btn red」...
+- ボタンパーツを広くしたい場合「btn wide」「〇〇Btn wide」...
+- ボタンパーツを赤く広くしたい場合「btn red wide」「〇〇Btn red wide」...
+- ヘッダーモジュールを高くしたい場合「header high」「〇〇Header high」...
+- ◯◯View をストライプ模様にしたい場合「◯◯View stripe」...
+- ヘッダーモジュールを広く高くストライプ模様にしたい場合「header wide high stripe」「〇〇Header wide high stripe」...
 
 
 ### CSS Class Type ~ Number ~
+
+ナンバリングのクラス名となります。
 
 ![Number](http://apbcss.com/img/github/css_class_type_004.png)
 example Class Name
@@ -302,7 +324,12 @@ Number
 - odd
 - even
 
+- リストモジュールの3番目「list > no3」「listItem no3」...
+- カラムモジュールの2カラム「column two」「◯◯Column two」...
+
 ### CSS Class Type ~ State ~
+
+状態を表すクラス名となります。
 
 ![State](http://apbcss.com/img/github/css_class_type_005.png)
 example Class Name
@@ -318,8 +345,16 @@ State
 - center
 - right
 
+- ボタンパーツがタップされた場合「btn tapped」「〇〇Btn tapped」「btn〇〇 tapped」「〇〇-btn tapped」「btn-〇〇 tapped」...
+- 成功メッセージテキスト「text success」「〇〇Text success」「text〇〇 success」「〇〇-text success」「text-〇〇 success」...
+- チェックボックスパーツがチェックされた状態「checkBox checked」「〇〇CheckBox checked」「checkBox〇〇 checked」...
+- ボタンを右寄せにしたい場合「btn right」「〇〇Btn right」「btn〇〇 right」「〇〇-btn right」「btn-〇〇 right」...
+- 注意文言「text note」「〇〇Text note」「text〇〇 note」「〇〇-text note」「text-〇〇 note」...
+
 
 ### CSS Class Type ~ Other ~
+
+その他のクラス名となります。
 
 ![Other](http://apbcss.com/img/github/css_class_type_006.png)
 example Class Name
@@ -331,7 +366,21 @@ Other
 - Controller name
 - Namespace
 
+- プライマリーボタン「btn primary」「〇〇Btn primary」「btn〇〇 primary」「〇〇-btn primary」「btn-〇〇 primary」...
+- ヘッダーモジュールのラップ要素「header」「〇〇Header」「header〇〇」「〇〇-header」「header-〇〇」...
+- サービス名が付与されたヘッダーモジュール「header ServiceName」「〇〇Header ServiceName」「header〇〇 ServiceName」「〇〇-header ServiceName」「header-〇〇 ServiceName」...
+- サービス名が付与されたボタン「btn gitHub」「〇〇Btn gitHub」「btn〇〇 gitHub」「〇〇-btn gitHub」「btn-〇〇 gitHub」...
+- コントローラー名が付与されたビューモジュール「◯◯View top」...
+- ネームスペースが付与されたビューモジュール「◯◯View Namespace」...
+
 etc..
+
+APB CSSでは、クラス名はローワーキャメルケース、ハイフン繋ぎ等のクラス名のレギュレーションは定めておりません。
+
+大事なのは、「原子パーツ」であるか、「モジュール」であるかと
+
+それら「原子パーツ」「モジュール」以外のその他のクラスは付与クラスとして扱うことに重点を置いております。
+
 
 *****
 
