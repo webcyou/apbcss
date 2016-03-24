@@ -122,9 +122,9 @@ CSS
 }
 ````
 
-これら「原子パーツ」には、Layoutを定義するStyleは発生致しません。
-
 ![Properties of the layout style is not included.](http://apbcss.com/img/github/no_layout.png)
+
+これら**「原子パーツ」**には、margin、float、position、等と言った、**Layoutを定義するStyleは発生致しません**。
 
 *****
 
