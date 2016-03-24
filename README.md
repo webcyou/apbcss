@@ -255,11 +255,13 @@ State
 ![Other](http://apbcss.com/img/github/css_class_type_006.png)
 example Class Name
 Other
+- Semantic name
 - wrap
 - Service name
 - Page name
 - Controller name
 - Namespace
+etc..
 
 *****
 
