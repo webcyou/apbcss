@@ -22,13 +22,13 @@
     /* Module */
     &.primary {
         background: #404040;
-        background: linear-gradient(top, #404040, #282828);
+        background: linear-gradient(to bottom, #404040, #282828);
         &:hover { background: #303030; }
     }
     &.secondly {
         background: #EEEEEE;
         box-shadow: inset #E5E5E5 0 0 1px 1px;
-        background: linear-gradient(top, #EEEEEE, #E5E5E5);
+        background: linear-gradient(to bottom, #EEEEEE, #E5E5E5);
         > a,
         > input { color: #000000; }
         &:hover { background: #EAEAEA; }
@@ -37,12 +37,12 @@
     /* Skin */
     &.green {
         background: #2A8000;
-        background: linear-gradient(top, #2D8900, #246E00);
+        background: linear-gradient(to bottom, #2D8900, #246E00);
         &:hover { background: #267400; }
     }
     &.orange {
         background: #FA9600;
-        background: linear-gradient(top, #FFC70A, #FA9600);
+        background: linear-gradient(to bottom, #FFC70A, #FA9600);
         &:hover { background: #FCAE05; }
     }
     &.l { width: 260px; }
