@@ -29,7 +29,7 @@ const CSS_PUBLIC_PATH        = path.join(PUBLIC_PATH, 'css');
 const IMAGE_PUBLIC_PATH      = path.join(PUBLIC_PATH, 'img');
 const HTML_PUBLIC_FILES      = path.join(HTML_PUBLIC_PATH, './**/*.html');
 const HTML_PUBLIC_INDEX_FILE = path.join(PUBLIC_PATH, 'index.html');
-const CSS_PUBLIC_FILES       = path.join(PUBLIC_PATH, './**/*.css');
+const CSS_PUBLIC_FILES       = path.join(CSS_PUBLIC_PATH, './**/*.css');
 const IMAGE_PUBLIC_FILES     = path.join(IMAGE_PUBLIC_PATH, './**/*.{jpg,png,gif}');
 
 
