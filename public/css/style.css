@@ -540,6 +540,12 @@ h4 {
   font-weight: bold;
 }
 
+.contents .text.small {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
 .contents h3 {
   margin: 30px 0 20px;
 }
@@ -670,6 +676,7 @@ h4 {
 /* Module */
 .textList {
   /* Module */
+  /* State */
 }
 
 .textList.apbCSSType {
@@ -679,6 +686,14 @@ h4 {
 .textList.apbCSSType > li strong {
   display: inline-block;
   width: 130px;
+}
+
+.textList.small > li {
+  margin-top: 2px;
+}
+
+.textList.small > li strong {
+  width: 80px;
 }
 
 /* Module */

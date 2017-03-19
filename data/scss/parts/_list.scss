@@ -15,6 +15,15 @@
             }
         }
     }
+
+    /* State */
+    &.small > li {
+        margin-top: 2px;
+
+        strong {
+            width: 80px;
+        }
+    }
 }
 
 /* Module */

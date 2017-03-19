@@ -27,6 +27,12 @@
         margin-top: 10px;
         font-size: 30px;
         font-weight: bold;
+
+        &.small {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: normal;
+        }
     }
     h3 {
         margin: 30px 0 20px;

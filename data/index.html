@@ -120,6 +120,14 @@
                 <p class="thumbnail"><img src="/img/top/pic_oocss.png" alt="oocss"></p>
                 <p class="thumbnail smacss"><img src="/img/top/pic_smacss.png" alt="smacss"></p>
             </div>
+
+            <br/>
+
+            <p class="text">Atomic Parts Base CSS(APB CSS)って何？？</p>
+            <p class="text small">Atomic Design + OOCSS + SMACSS = <b>Atomic Parts Base CSS (APB CSS)</b></p>
+            <p class="text small">APBCSS は <b>A</b>tomic <b>P</b>arts <b>B</b>ase <b>CSS</b>のそれぞれ頭文字を取っていて、<b>「エーピービーシーエスエス」</b>と呼びます。</p>
+            <p class="text small"><b>APBCSS は Atomic Designをベースに設計された「CSSアーキテクチャ」の一つ</b>となります。</p>
+
             <h4>Point</h4>
             <ul class="textList">
                 <li class="text">- <strong>Simple</strong></li>
@@ -130,6 +138,16 @@
                 <li class="text">- <strong>Scalable</strong></li>
                 <li class="text">- <strong>Interactive</strong></li>
             </ul>
+
+            <br/>
+            <br/>
+
+            <p class="text small">APBCSSは「シンプル」「予測可能」「汎用性」「再利用可能」「メンテナンス性」「拡張性」「インタラクティブ」を備えたCSSアーキテクチャとなっております。</p>
+            <p class="text small">APBCSSの 特徴と致しまして、多くのCSSアーキテクチャでも用いられている、Layoutといった概念はなく、 構成の考え方もその逆で、<b>細部化出来ないUIパーツから、定義していくアーキテクチャ</b>となっております。</p>
+            <p class="text small"><b>「細部化出来ないUIパーツ」をAtomic Partsとして振る舞い、</b>Atomic PartsとAtomic Partsが組み合わさった際に、そのパーツは<b>「Molecules」（分子）</b>として（変化）振る舞われます。</p>
+            <p class="text small">また、それらの、Atomic Parts や<b>Molecules Partsは、「Module」</b>によって包括されます。</p>
+            <p class="text small">Atomic Parts やMolecules Partsが包括された「Module」 を更に「Module」 によって包括していきページは作成されると言った考えです。</p>
+
         </div><!-- /.contents -->
 
         <div class="contents agenda2">
@@ -137,7 +155,14 @@
             <p class="text">Atomic Design</p>
             <p class="thumbnail center atomicDesign"><img src="/img/top/pic_atomic_design.png" alt="Atomic Design"></p>
             <p class="linkText right"><a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">http://bradfrost.com/blog/post/atomic-web-design/</a></p>
-            <h4>Atoms</h4>
+
+            <p class="text small">APBCSSは、Atomic Designをベースに考えているアーキテクチャとなります。</p>
+
+            <h4>Atoms（原子）</h4>
+
+            <p class="text small">原子パーツとして振る舞う「ボタン」パーツの例です。</p>
+            <p class="text small">原子classである<b>「btn」と「Number」typeのclassを付与</b>した例となります。</p>
+
             <div class="detailBox">
                 <div class="column">
                     <p class="thumbnail"><img src="/img/top/pic_atoms.png" alt="Atoms"></p>
@@ -174,6 +199,9 @@
                 </div>
             </div>
 
+            <p class="text small">原子パーツとして振る舞う「アイコン」パーツの例です。</p>
+            <p class="text small">原子classである「icon」と、その「Semantic name」「Service name」となるClassを付与した例となります。</p>
+
             <div class="detailBox">
                 <div class="column">
                     <p class="thumbnail"><img src="/img/top/pic_atoms.png" alt="Atoms"></p>
@@ -203,13 +231,19 @@
                 <p class="text center"><span class="icon ban"></span>margin, float, position, etc..</p>
             </div>
 
+            <p class="text small">これら<b>「原子パーツ」</b>には、margin、float、position、等と言った、<b>Layoutを定義するStyleは発生致しません</b>。</p>
+
         </div><!-- /.contents -->
 
 
         <div class="contents">
             <h3>Molecules Style Sheet</h3>
 
-            <h4>Molecules</h4>
+            <p class="text small"><b>Atomic Parts とAtomic Partsが組み合わさった際</b>に、そのパーツは<b>「Molecules」分子として（変化）</b>振る舞われます。</p>
+            <p class="text small">また、これらの、Atomic Parts やMolecules Partsは、<b>「Module」によって包括されます。</b></p>
+
+            <h4>Molecules（分子）</h4>
+
             <div class="detailBox">
                 <div class="column">
                     <p class="thumbnail"><img src="/img/top/pic_molecules.png" alt="Molecules"></p>
@@ -233,6 +267,14 @@
                     </div>
                 </div>
             </div>
+
+            <p class="text small">原子パーツとして振る舞っている「ボタン」には、<b>Layoutを定義するStyleは発生致しません。</b></p>
+            <p class="text small">その子要素である原子パーツ<b>「アイコン」には、Layoutを定義するStyleは発生致します</b>。</p>
+
+            <p class="text small">以下は原子パーツとして振る舞う「テキスト」パーツと原子パーツ「アイコン」の例です。</p>
+            <p class="text small">原子パーツ「アイコン」には、<b>「State」typeの classが付与されています</b>。</p>
+
+            <br/><br/>
 
             <div class="detailBox">
                 <div class="column">
@@ -258,6 +300,8 @@
                 <p class="text center success">Layout property is generated when you became a molecule.</p>
                 <p class="text center success">margin, float, position, etc..</p>
             </div>
+
+            <p class="text small">原子パーツと原子パーツが合わさり、分子パーツとなった場合は<b>「テキスト」にはLayoutを定義するStyleは発生しない</b>のですが、その<b>子要素にはLayoutを定義するStyleが発生致します</b>。</p>
         </div><!-- /.contents -->
 
         <div class="contents">
@@ -270,6 +314,8 @@
                 </div>
             </div>
             <p class="text">Excerpts from the 「OOCSS」,「SMACSS 」</p>
+
+            <p class="text small">APBCSSでは、付与されるClassには OOCSS + SMACSS をベースとした、マルチクラスを採用しております。</p>
 
             <h4>CSS Class Type</h4>
             <p class="thumbnail apbCSSType center"><img src="/img/top/pic_css_class_type.png" width="795" alt="CSS Class Type"></p>
@@ -284,7 +330,25 @@
             </ul>
             <p class="text center success">Based on the atom name or module name,<br> and grant the six types of class name.</p>
 
+            <br/><br/>
+
+            <ul class="textList apbCSSType small">
+                <li class="text small">- <strong>Atomic</strong>：原子パーツ名となるクラス名</li>
+                <li class="text small">- <strong>Module</strong>：UI を包括するモジュール名となるクラス名</li>
+                <li class="text small">- <strong>Skin</strong>：装飾などのクラス名</li>
+                <li class="text small">- <strong>Number</strong>：ナンバリング用のクラス名</li>
+                <li class="text small">- <strong>State</strong>：状態を表すクラス名</li>
+                <li class="text small">- <strong>Other</strong>：その他のクラス名。パーツのセマンティックネームもここに含む。</li>
+            </ul>
+
+            <p class="text small">主に、「Atomic」と「Module」のクラス名を基本とします。</p>
+            <p class="text small">つまり、単独クラスで存在するのは、<b>基本「Atomic」と「Module」</b>となり、それ以外の<b>「Skin」「Number」「State」「Other」</b>は、それらのパーツの付与クラスとして扱われます。</p>
+            <p class="text small">ul、ol等などをモジュールとして扱う場合の子要素に限っては例外となります。</p>
+
             <h4>CSS Class Type ~ Atomic ~</h4>
+
+            <p class="text small">原子パーツのクラス名の例となります。</p>
+
             <p class="label">example Class Name</p>
             <div class="detailBox">
                 <div class="column">
@@ -305,7 +369,16 @@
                 </div>
             </div>
 
+            <ul class="textList">
+                <li class="text small">・テキストパーツの場合「text」「〇〇Text」「text〇〇」「〇〇-text」「text-〇〇」...</li>
+                <li class="text small">・アイコンパーツの場合「icon」「〇〇Icon」「icon〇〇」「〇〇-icon」「icon-〇〇」...</li>
+                <li class="text small">・ボタンパーツの場合「btn」「〇〇Btn」「btn〇〇」「〇〇-btn」「btn-〇〇」... 等のクラス名を用いて原子パーツを作成します。</li>
+            </ul>
+
             <h4>CSS Class Type ~ Module ~</h4>
+
+            <p class="text small">モジュールのクラス名の例となります。</p>
+
             <p class="label">example Class Name</p>
             <div class="detailBox">
                 <div class="column">
@@ -328,7 +401,17 @@
                 </div>
             </div>
 
+            <ul class="textList">
+                <li class="text small">・ヘッダーモジュールの場合「header」「〇〇Header」「header〇〇」「〇〇-header」「header-〇〇」...</li>
+                <li class="text small">・タイトルモジュールの場合「title」「〇〇Title」「title〇〇」「〇〇-title」「title-〇〇」...</li>
+                <li class="text small">・リストモジュールの場合「list」「〇〇List」「list〇〇」「〇〇-list」「list-〇〇」... 等のクラス名を用いてモジュールを作成します。</li>
+            </ul>
+
             <h4>CSS Class Type ~ Skin ~</h4>
+
+            <p class="text small">ここからのクラスは、原子パーツやモジュールの付与クラスとして扱います。</p>
+            <p class="text small">スキンタイプのクラス名の例となります。</p>
+
             <p class="label">example Class Name</p>
             <div class="detailBox">
                 <div class="column">
@@ -349,6 +432,15 @@
                     </ul>
                 </div>
             </div>
+
+            <ul class="textList">
+                <li class="text small">・ボタンパーツを赤くしたい場合「btn red」「〇〇Btn red」...</li>
+                <li class="text small">・ボタンパーツを広くしたい場合「btn wide」「〇〇Btn wide」...</li>
+                <li class="text small">・ボタンパーツを赤く広くしたい場合「btn red wide」「〇〇Btn red wide」...</li>
+                <li class="text small">・ヘッダーモジュールを高くしたい場合「header high」「〇〇Header high」...</li>
+                <li class="text small">・◯◯View をストライプ模様にしたい場合「◯◯View stripe」...</li>
+                <li class="text small">・ヘッダーモジュールを広く高くストライプ模様にしたい場合「header wide high stripe」「〇〇Header wide high stripe」...</li>
+            </ul>
 
             <h4>CSS Class Type ~ Number ~</h4>
             <p class="label">example Class Name</p>
@@ -371,8 +463,16 @@
                 </div>
             </div>
 
+            <ul class="textList">
+                <li class="text small">・リストモジュールの3番目「list > no3」「listItem no3」...</li>
+                <li class="text small">・カラムモジュールの2カラム「column two」「◯◯Column two」...</li>
+            </ul>
+
             <h4>CSS Class Type ~ State ~</h4>
             <p class="label">example Class Name</p>
+
+            <p class="text small">状態を表すクラス名の例となります。</p>
+
             <div class="detailBox">
                 <div class="column">
                     <div class="picBox">
@@ -394,7 +494,19 @@
                 </div>
             </div>
 
+            <ul class="textList">
+                <li class="text small">・ボタンパーツがタップされた場合「btn tapped」「〇〇Btn tapped」「btn〇〇 tapped」「〇〇-btn tapped」「btn-〇〇 tapped」...</li>
+                <li class="text small">・成功メッセージテキスト「text success」「〇〇Text success」「text〇〇 success」「〇〇-text success」「text-〇〇 success」...</li>
+                <li class="text small">・チェックボックスパーツがチェックされた状態「checkBox checked」「〇〇CheckBox checked」「checkBox〇〇 checked」...</li>
+                <li class="text small">・ボタンを右寄せにしたい場合「btn right」「〇〇Btn right」「btn〇〇 right」「〇〇-btn right」「btn-〇〇 right」...</li>
+                <li class="text small">・注意文言「text note」「〇〇Text note」「text〇〇 note」「〇〇-text note」「text-〇〇 note」...</li>
+            </ul>
+
+
             <h4>CSS Class Type ~ Other ~</h4>
+
+            <p class="text small">その他のクラス名の例となります。</p>
+
             <p class="label">example Class Name</p>
             <div class="detailBox">
                 <div class="column">
@@ -411,11 +523,27 @@
                     </ul>
                 </div>
             </div>
+
+            <ul class="textList">
+                <li class="text small">・プライマリーボタン「btn primary」「〇〇Btn primary」「btn〇〇 primary」「〇〇-btn primary」「btn-〇〇 primary」...</li>
+                <li class="text small">・ヘッダーモジュールのラップ要素「header」「〇〇Header」「header〇〇」「〇〇-header」「header-〇〇」...</li>
+                <li class="text small">・サービス名が付与されたヘッダーモジュール「header ServiceName」「〇〇Header ServiceName」「header〇〇 ServiceName」「〇〇-header ServiceName」「header-〇〇 ServiceName」...</li>
+                <li class="text small">・サービス名が付与されたボタン「btn gitHub」「〇〇Btn gitHub」「btn〇〇 gitHub」「〇〇-btn gitHub」「btn-〇〇 gitHub」...</li>
+                <li class="text small">・コントローラー名が付与されたビューモジュール「◯◯View top」...</li>
+                <li class="text small">・ネームスペースが付与されたビューモジュール「◯◯View Namespace」...</li>
+            </ul>
+
+            <p class="text small">etc..</p>
+            <p class="text small">APB CSSでは、クラス名がローワーキャメルケース、ハイフン繋ぎ等と言った、所謂<b>クラス名のレギュレーションは定めておりません</b>。</p>
+            <p class="text small">大事なのは、<b>「原子パーツ」であるか、「モジュール」であるか</b>と、それら<b>「原子パーツ」「モジュール」以外のその他のクラスは付与クラスとして扱う</b>ことに重点を置いております。</p>
         </div><!-- /.contents -->
 
         <div class="contents">
             <h3>Directory structure</h3>
             <h4>SCSS Directory</h4>
+
+            <p class="text small">APBCSSでは以下のディレクトリ構造及びSCSSファイルの管理方法を推奨しております。</p>
+
             <div class="codeBox">
                 <p class="label">SCSS</p>
 <pre>scss
@@ -431,6 +559,11 @@
             <ul class="textList">
                 <li class="text">- <strong>_common_inc.scss</strong>: import base and pages</li>
                 <li class="text">- <strong>_parts.scss</strong>: import parts files</li>
+            </ul>
+
+            <ul class="textList">
+                <li class="text small">・_common_inc.scss:プロジェクト全体の共通style</li>
+                <li class="text small">・_parts.scss:原子パーツのstyle</li>
             </ul>
 
             <h4>base Directory</h4>
@@ -451,7 +584,18 @@
                 <li class="text">- <strong>_setting.scss</strong>: Define such as variables and prefix</li>
             </ul>
 
+            <ul class="textList">
+                <li class="text small">・_common_inc.scss:プロジェクト全体の共通のベースとなるstyle</li>
+                <li class="text small">・_mixin.scss: mixin style</li>
+                <li class="text small">・_reset.scss: 初期化 style</li>
+                <li class="text small">・_setting.scss: 変数及びプリフィックスなどを定義したstyle</li>
+            </ul>
+
+
             <h4>parts Directory</h4>
+
+            <p class="text small">パーツディレクトリにパーツ単位でファイル分けを行います。</p>
+
             <div class="codeBox">
                 <p class="label">parts</p>
 <pre>scss
@@ -466,6 +610,9 @@
             <p class="text success">File group that defines the atom and modules.</p>
 
             <h4>pages Directory</h4>
+
+            <p class="text small">ページ固有のstyleはこちらに格納致します。</p>
+
             <div class="codeBox">
                 <p class="label">pages</p>
 <pre>scss
@@ -479,7 +626,14 @@
             </div>
             <p class="text">Defines page-specific layout style.</p>
 
+            <p class="text small">主にmargin、position、floatなどのLayout Styleを定義する事になります。</p>
+            <p class="text small">原子パーツにまでするほどでもないページ固有のパーツもこちらに定義すると良いでしょう。</p>
+
+
             <h4>name space</h4>
+
+            <p class="text small">ネームスペースを設けることによってページ固有のstyleを定義することができます。</p>
+
             <div class="codeBox">
                 <p class="label">HTML</p>
                 <pre>&lt;section id="top" class="top"&gt;</pre>
