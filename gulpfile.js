@@ -18,11 +18,13 @@ const HTML_SRC_PATH       = path.join(SRC_PATH, 'html');
 const SCSS_SRC_PATH       = path.join(SRC_PATH, 'scss');
 const JS_SRC_PATH         = path.join(SRC_PATH, 'js');
 const IMAGE_SRC_PATH      = path.join(SRC_PATH, 'img');
+const FILE_SRC_PATH       = path.join(SRC_PATH, 'file');
 const HTML_SRC_FILES      = path.join(HTML_SRC_PATH, './**/*.html');
 const HTML_SRC_INDEX_FILE = path.join(SRC_PATH, 'index.html');
 const SCSS_SRC_FILES      = path.join(SCSS_SRC_PATH, './**/*.scss');
 const JS_SRC_FILES        = path.join(JS_SRC_PATH, './**/*.js');
 const IMAGE_SRC_FILES     = path.join(IMAGE_SRC_PATH, './**/*.{jpg,png,gif,ico}');
+const FILE_SRC_FILES      = path.join(FILE_SRC_PATH, './**/*.pdf');
 
 // public files
 const PUBLIC_PATH            = path.join(ROOT, './public');
@@ -30,6 +32,7 @@ const HTML_PUBLIC_PATH       = path.join(PUBLIC_PATH, 'html');
 const CSS_PUBLIC_PATH        = path.join(PUBLIC_PATH, 'css');
 const JS_PUBLIC_PATH         = path.join(PUBLIC_PATH, 'js');
 const IMAGE_PUBLIC_PATH      = path.join(PUBLIC_PATH, 'img');
+const FILE_PUBLIC_PATH       = path.join(PUBLIC_PATH, 'file');
 const HTML_PUBLIC_FILES      = path.join(HTML_PUBLIC_PATH, './**/*.html');
 const HTML_PUBLIC_INDEX_FILE = path.join(PUBLIC_PATH, 'index.html');
 const CSS_PUBLIC_FILES       = path.join(CSS_PUBLIC_PATH, './**/*.css');
@@ -40,7 +43,7 @@ const IMAGE_PUBLIC_FILES     = path.join(IMAGE_PUBLIC_PATH, './**/*.{jpg,png,gif
  * Clean Task
  **/
 gulp.task('public.clean', function() {
-  del([PUBLIC_PATH + '/*'], { force: true });
+  return del([PUBLIC_PATH + '/*'], { force: true });
 });
 
 
@@ -103,6 +106,12 @@ gulp.task('img.dist', function () {
   return gulp.src(IMAGE_SRC_FILES).pipe(gulp.dest(IMAGE_PUBLIC_PATH));
 });
 
+/**
+ * Pdf etc Task
+ **/
+gulp.task('file.dist', function () {
+  return gulp.src(FILE_SRC_FILES).pipe(gulp.dest(FILE_PUBLIC_PATH));
+});
 
 /**
  * watch Task
@@ -152,6 +161,19 @@ gulp.task('build.image', function(callback) {
   );
 });
 
+gulp.task('build.file', function(callback) {
+  return runSequence(
+    'file.dist',
+    callback
+  );
+});
+
+gulp.task('build.all', function(callback) {
+  return runSequence(
+    ['build.html', 'build.css', 'build.js', 'build.image', 'build.file'],
+    callback
+  );
+});
 
 /**
  * Browser Sync
@@ -178,10 +200,7 @@ gulp.task('browser-sync', function() {
 gulp.task('default', function(callback) {
   runSequence(
     'public.clean',
-    'build.html',
-    'build.css',
-    'build.js',
-    'build.image',
+    'build.all',
     'watch',
     'browser-sync',
     callback
