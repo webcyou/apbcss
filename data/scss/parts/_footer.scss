@@ -15,7 +15,7 @@ footer {
         min-height: 100px;
         margin: 0 auto;
         padding-top: 14px;
-        @include box-sizing(border-box);
+        box-sizing: border-box;
         font-size: 13px;
         font-family: Arial, sans-serif;
 

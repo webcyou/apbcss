@@ -71,7 +71,7 @@
         width: 104px;
         height: 132px;
         background: url(#{$imgPath}common/icon_apb_css_class_sp.png) no-repeat;
-        @include background-size(800px auto);
+        background-size: 800px auto;
         &.module {
             background-position: -137px top;
         }

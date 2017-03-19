@@ -15,7 +15,7 @@
 
 /* Module */
 .contents {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 
     /* Atomic */
     .text {
@@ -78,7 +78,7 @@
 .detailBox {
     /* Atomic */
     .column {
-        @include display-flex;
+        display: flex;
     }
     .thumbnail {
         padding: 0 10px;

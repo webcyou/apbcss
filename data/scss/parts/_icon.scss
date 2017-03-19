@@ -11,7 +11,7 @@
         width: 34px;
         height: 34px;
         background: url(#{$imgPath}common/icon_social_circle_sp.png) no-repeat;
-        @include background-size(205px auto);
+        background-size: 205px auto;
         &.twitter { background-position: -42px top; }
         &.hatena { background-position: -84px top; }
         &.rss { background-position: -129px top; }
@@ -20,7 +20,7 @@
         /* Skin */
         .white {
             background: url(#{$imgPath}common/icon_social_s_sp.png) no-repeat;
-            @include background-size(auto 15px);
+            background-size: auto 15px;
             &.facebook {
                 width: 8px;
                 height: 15px;
@@ -59,7 +59,7 @@
         width: 40px;
         height: 40px;
         background: url(#{$imgPath}common/icon_ban.png) no-repeat;
-        @include background-size(40px auto);
+        background-size: 40px auto;
     }
 }
 
@@ -68,13 +68,13 @@
     width: 188px;
     height: 225px;
     background: url(#{$imgPath}common/logo_main.png) no-repeat;
-    @include background-size(188px auto);
+    background-size: 188px auto;
 
     /* Skin */
     &.s {
         width: 33px;
         height: 38px;
-        @include background-size(33px auto);
+        background-size: 33px auto;
     }
 
     /* State */

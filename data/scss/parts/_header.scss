@@ -6,7 +6,7 @@
 header.header {
     height: 50px;
     background: #f8f8f8;
-    @include background(linear-gradient(top, #fff, #f8f8f8));
+    background: linear-gradient(top, #fff, #f8f8f8);
 
     /* Other */
     > .wrap {
