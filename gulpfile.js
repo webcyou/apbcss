@@ -20,7 +20,7 @@ const IMAGE_SRC_PATH      = path.join(SRC_PATH, 'img');
 const HTML_SRC_FILES      = path.join(HTML_SRC_PATH, './**/*.html');
 const HTML_SRC_INDEX_FILE = path.join(SRC_PATH, 'index.html');
 const SCSS_SRC_FILES      = path.join(SCSS_SRC_PATH, './**/*.scss');
-const IMAGE_SRC_FILES     = path.join(IMAGE_SRC_PATH, './**/*.{jpg,png,gif}');
+const IMAGE_SRC_FILES     = path.join(IMAGE_SRC_PATH, './**/*.{jpg,png,gif,ico}');
 
 // public files
 const PUBLIC_PATH            = path.join(ROOT, './public');
@@ -30,7 +30,7 @@ const IMAGE_PUBLIC_PATH      = path.join(PUBLIC_PATH, 'img');
 const HTML_PUBLIC_FILES      = path.join(HTML_PUBLIC_PATH, './**/*.html');
 const HTML_PUBLIC_INDEX_FILE = path.join(PUBLIC_PATH, 'index.html');
 const CSS_PUBLIC_FILES       = path.join(CSS_PUBLIC_PATH, './**/*.css');
-const IMAGE_PUBLIC_FILES     = path.join(IMAGE_PUBLIC_PATH, './**/*.{jpg,png,gif}');
+const IMAGE_PUBLIC_FILES     = path.join(IMAGE_PUBLIC_PATH, './**/*.{jpg,png,gif,ico}');
 
 
 /**
