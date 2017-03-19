@@ -903,6 +903,7 @@ header.header {
 }
 
 header.header > .wrap {
+  position: relative;
   width: 1000px;
   margin: 0 auto;
   /* Atomic */
