@@ -520,6 +520,11 @@ h4 {
   margin: 20px auto;
 }
 
+.mainTop .btnList {
+  width: 500px;
+  margin: 50px auto 0;
+}
+
 /* Module */
 .contents {
   -webkit-box-sizing: border-box;
@@ -694,6 +699,163 @@ h4 {
   margin-bottom: 8px;
 }
 
+.btnList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.socialLinkList.share {
+  margin-top: 60px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.socialLinkList.share > li {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 8px;
+  padding: 0;
+  background: #305097;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.socialLinkList.share > li > .iconWrap {
+  height: 60px;
+}
+
+.socialLinkList.share > li > .iconWrap .icon.social {
+  display: block;
+  margin: 40px auto 0;
+  background: url(../img/ui//common/icon_social_s_sp.png) no-repeat;
+  -webkit-background-size: auto 15px;
+  background-size: auto 15px;
+}
+
+.socialLinkList.share > li > .iconWrap .icon.social.facebook {
+  width: 8px;
+  height: 15px;
+  background-position: left top;
+}
+
+.socialLinkList.share > li > .iconWrap .icon.social.twitter {
+  width: 16px;
+  height: 13px;
+  background-position: -9px top;
+}
+
+.socialLinkList.share > li > .iconWrap .icon.social.google {
+  width: 16px;
+  height: 16px;
+  background-position: -26px top;
+}
+
+.socialLinkList.share > li > .iconWrap .icon.social.hatena {
+  width: 15px;
+  height: 13px;
+  background-position: -43px top;
+}
+
+.socialLinkList.share > li > .iconWrap .icon.social.feedly {
+  width: 17px;
+  height: 15px;
+  background-position: -59px top;
+}
+
+.socialLinkList.share > li > .iconWrap .icon.social.pocket {
+  width: 15px;
+  height: 13px;
+  background-position: -78px top;
+}
+
+.socialLinkList.share > li > .iconWrap .icon.social.line {
+  width: 17px;
+  height: 15px;
+  background-position: -94px top;
+}
+
+.socialLinkList.share > li > .iconWrap .icon.social.rss {
+  width: 17px;
+  height: 17px;
+  background-position: -116px top;
+}
+
+.socialLinkList.share > li > .iconWrap .icon.social.line {
+  margin: 24px auto 0;
+}
+
+.socialLinkList.share > li.twitter {
+  background: #00aced;
+}
+
+.socialLinkList.share > li.hatena {
+  background: #008fde;
+}
+
+.socialLinkList.share > li.google {
+  background: #db4a39;
+}
+
+.socialLinkList.share > li.pocket {
+  background: #d3505a;
+}
+
+.socialLinkList.share > li.line {
+  background: #00c300;
+}
+
+.socialLinkList.share > li .count {
+  position: absolute;
+  top: 5px;
+  left: 4%;
+  width: 92%;
+  height: 15px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.socialLinkList.share > li .count > .txt {
+  font-size: 12px;
+  text-align: center;
+  line-height: 15px;
+}
+
+.socialLinkList.share > li .count::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  height: 0px;
+  width: 0px;
+  margin: 0 0 0 -4px;
+  border-top: #fff 8px solid;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 0px solid transparent;
+}
+
+.socialLinkList.share > li .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 10;
+}
+
+.socialLinkList.share > li .btn > a {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
 /* Separate Style
 -------------------------------------------------- */
 /*
@@ -727,6 +889,12 @@ header.header > .wrap {
 
 header.header > .wrap h1 {
   padding-top: 7px;
+}
+
+header.header .facebook {
+  position: absolute;
+  right: 10px;
+  top: 17px;
 }
 
 /* Footer Style
