@@ -16,16 +16,19 @@ const ROOT                = __dirname;
 const SRC_PATH            = path.join(ROOT, './data');
 const HTML_SRC_PATH       = path.join(SRC_PATH, 'html');
 const SCSS_SRC_PATH       = path.join(SRC_PATH, 'scss');
+const JS_SRC_PATH         = path.join(SRC_PATH, 'js');
 const IMAGE_SRC_PATH      = path.join(SRC_PATH, 'img');
 const HTML_SRC_FILES      = path.join(HTML_SRC_PATH, './**/*.html');
 const HTML_SRC_INDEX_FILE = path.join(SRC_PATH, 'index.html');
 const SCSS_SRC_FILES      = path.join(SCSS_SRC_PATH, './**/*.scss');
+const JS_SRC_FILES        = path.join(JS_SRC_PATH, './**/*.js');
 const IMAGE_SRC_FILES     = path.join(IMAGE_SRC_PATH, './**/*.{jpg,png,gif,ico}');
 
 // public files
 const PUBLIC_PATH            = path.join(ROOT, './public');
 const HTML_PUBLIC_PATH       = path.join(PUBLIC_PATH, 'html');
 const CSS_PUBLIC_PATH        = path.join(PUBLIC_PATH, 'css');
+const JS_PUBLIC_PATH         = path.join(PUBLIC_PATH, 'js');
 const IMAGE_PUBLIC_PATH      = path.join(PUBLIC_PATH, 'img');
 const HTML_PUBLIC_FILES      = path.join(HTML_PUBLIC_PATH, './**/*.html');
 const HTML_PUBLIC_INDEX_FILE = path.join(PUBLIC_PATH, 'index.html');
@@ -85,6 +88,13 @@ gulp.task('css.min', function () {
     .pipe(gulp.dest(CSS_PUBLIC_PATH));
 });
 
+/**
+ * JavaScript Task
+ **/
+gulp.task('js', function() {
+  return gulp.src(JS_SRC_FILES)
+    .pipe(gulp.dest(JS_PUBLIC_PATH));
+});
 
 /**
  * Image Task
@@ -99,7 +109,7 @@ gulp.task('img.dist', function () {
  **/
 gulp.task('watch', function() {
   // html
-  gulp.watch([HTML_SRC_FILES, HTML_PUBLIC_FILES], ['build.html']);
+  gulp.watch([HTML_SRC_FILES, HTML_SRC_INDEX_FILE], ['build.html']);
 
   // CSS,SASS
   gulp.watch([SCSS_SRC_FILES], ['build.css']);
@@ -124,6 +134,13 @@ gulp.task('build.css', function(callback) {
     'sass',
     'css.prefixer',
     'css.min',
+    callback
+  );
+});
+
+gulp.task('build.js', function(callback) {
+  return runSequence(
+    'js',
     callback
   );
 });
@@ -163,6 +180,7 @@ gulp.task('default', function(callback) {
     'public.clean',
     'build.html',
     'build.css',
+    'build.js',
     'build.image',
     'watch',
     'browser-sync',
