@@ -436,7 +436,6 @@ h4 {
 .btn.primary {
   background: #404040;
   background: -webkit-gradient(linear, left top, left bottom, from(#404040), to(#282828));
-  background: -webkit-linear-gradient(top, #404040, #282828);
   background: linear-gradient(to bottom, #404040, #282828);
 }
 
@@ -449,7 +448,6 @@ h4 {
   -webkit-box-shadow: inset #E5E5E5 0 0 1px 1px;
   box-shadow: inset #E5E5E5 0 0 1px 1px;
   background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#E5E5E5));
-  background: -webkit-linear-gradient(top, #EEEEEE, #E5E5E5);
   background: linear-gradient(to bottom, #EEEEEE, #E5E5E5);
 }
 
@@ -465,7 +463,6 @@ h4 {
 .btn.green {
   background: #2A8000;
   background: -webkit-gradient(linear, left top, left bottom, from(#2D8900), to(#246E00));
-  background: -webkit-linear-gradient(top, #2D8900, #246E00);
   background: linear-gradient(to bottom, #2D8900, #246E00);
 }
 
@@ -476,7 +473,6 @@ h4 {
 .btn.orange {
   background: #FA9600;
   background: -webkit-gradient(linear, left top, left bottom, from(#FFC70A), to(#FA9600));
-  background: -webkit-linear-gradient(top, #FFC70A, #FA9600);
   background: linear-gradient(to bottom, #FFC70A, #FA9600);
 }
 
@@ -897,7 +893,6 @@ header.header {
   height: 50px;
   background: #f8f8f8;
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f8f8f8));
-  background: -webkit-linear-gradient(top, #fff, #f8f8f8);
   background: linear-gradient(to bottom, #fff, #f8f8f8);
   /* Other */
 }
